@@ -12,41 +12,54 @@
   </head>
 
   <body>
-
+    <!---THIS CONTAINER WILL SHOW FIRST-->
     <div class="container">
-      <h2>Welcome to A Date to Remember ~ You pick the Era and we curate the experience</h2>
+      <h2>Welcome to A Date to Remember ~ See what cuisine you can build from your own pantry</h2>
       <a class="dropdown-trigger btn" href="#" data-target="dropdown1"
-        >What Era Would You Like To Enter Into?</a>
+        >What are you in the mood for?</a>
 
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!"></a>50's</li>
-        <li><a href="#!"></a>60's</li>
-        <li><a href="#!"></a>70's</li>
-        <li><a href="#!"></a>80's</li>
-        <li><a href="#!"></a>90's</li>
-        <li><a href="#!"></a>2000's</li>
+        <li><a href="#!"></a>American</li>
+        <li><a href="#!"></a>Chinese</li>
+        <li><a href="#!"></a>Italian</li>
+        <li><a href="#!"></a>Mediterranian</li>
+        <li><a href="#!"></a>Ethiopian</li>
+        <li><a href="#!"></a>Mexican</li>
+        <li><a href="#!"></a>German</li>
+        <li><a href="#!"></a>Brazilian</li>
       </ul>
     </div>
 
-    <!---This container will show after the Era is chosen-->
-    <div class="container">
+    <!---This container will show SECOND - after the cuisine chosen-->
+    <div class="container" id="firstHiddenContainer">
       <div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <!--Card title can populate with the Era here in this span-->
-              <span class="card-title" id="eraRange"></span>
-              <p>Here is a recipe from the Era you have chosen</p>
-              <!--Random API for recipe can populate here-->
-              <span id="randomRecipe"></span>
-            </div>
+              <!--Card title-->
+              <span class="card-title" id="ingredients"></span>
+              <p>What ingredients do you have in your pantry?</p>
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textarea1" class="materialize-textarea"></textarea>
+                      <!--Text area for user to enter in the ingredients they have-->
+                      <label for="textarea1" id="userIngredients"></label>
+                    </div>
+                  </div>
+                </form>
             <div class="card-action">
-              <!--Button for a different recipe-->
-              <button id="diffRecipe">Choose A Different Recipe</button>
+              <!--Button for randomizing recipe pulls one page-->
+              <button id="recipeBtn">Let's see what recipe we can pull up for you</button>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <!---THIS CONTAINER WILL SHOW 3rd-->
+    <div class="container" id="secondhiddenContainer">
+      <div class="row">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
           <!--Possible Thumbnail pics here-->
@@ -62,41 +75,32 @@
         <div class="card-reveal">
           <!---The cocktail name can be populated in this span-->
           <span class="card-title grey-text text-darken-4" id="cocktailName"><i class="material-icons right">close</i></span>
-          <p>THIS CAN BE POPULATED WITH THE RECIPE</p>
+          <p>THIS CAN BE POPULATED WITH THE COCKTAIL RECIPE</p>
         </div>
       </div>
+      </div>
+    </div>
+    <!----THIS CONTAINER WILL SHOW LAST-->
+    <div class="container" id="lastContainer">
       <div class="row">
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <!--Card title can populate with the playlist name here in this span-->
               <span class="card-title" id="namePlaylist"></span>
-              <p>Here is a playlist from the Era you have chosen</p>
+              <p>Here is a playlist for you while you cook</p>
               <span id="randomPlaylist"></span>
-            </div>
-            <div class="card-action">
-              <button id="diffPlaylist">Choose A Different Playlist</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <!---Possible picture name can go here???-->
-              <span class="card-title" id="pictureName"></span>
-              <p>Want to have some more fun here is a photo from this Era ~ Dress up! Make it a night!!</p>
-              <img id="randomPicture"/>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Want to see what others have done!?
-      <i class="material-icons right">send</i>
-    </button>
+    <!----FOOTER???--->
+      <button class="btn waves-effect waves-light" type="submit" name="action">Want to see what others have done!?
+        <i class="material-icons right">send</i>
+      </button>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
   </body>
