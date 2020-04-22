@@ -137,81 +137,83 @@ $(document).ready(function () {
                 && $('#lastContainer').show();
         }
 
-    //     $("#dropdown1").click(function(){
-    //         var userChoice = $(this).child("id")
-    //   });
-        
-              
-      $("#dropdown1").change(function() { // Run this function when option selected
-        let userChoice = this.value;
-        console.log(userChoice);
-        if(userChoice == "1") {
+        //     $("#dropdown1").click(function(){
+        //         var userChoice = $(this).child("id")
+        //   });
+
+
+        var musicSelection = $('li').first()
+        console.log(musicSelection);
+        if (userChoice == "1") {
             musicSelection = "christian+petermann";
-        } else if(userChoice == "2") {
+        } else if (userChoice == "2") {
             musicSelection = "jose-estrella-resonante";
-        } else if(userChoice == "6") {
+        } else if (userChoice == "6") {
             musicSelection = "schloub";
         } else {
-          console.log("Stop/Don't run any API's");
+            console.log("Stop/Don't run any API's");
         }
-      });
-      
-      // var userChoice = $('#dropdown1').val();
+    
 
-        // console.log(regionalSelection);
+    // var userChoice = $('#dropdown1').val();
 
-          // Why won't if/else if not work here?
+    // console.log(regionalSelection);
 
-        // if ($(this).val($('1'))) {
-        //    musicSelection = "christian+petermann";
-        // } else if ($(this).val($('2'))) {
-        //     musicSelection = "jose-estrella-resonante";
-        //  } else if (userChoice.val($('6'))) {
-        //     musicSelection = "schloub";
-        // } else {
-        //     console.log('Invalid item');
-        // }
-      
-        // console.log(musicSelection);
+    // Why won't if/else if not work here?
 
-        var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
+    // if ($(this).val($('1'))) {
+    //    musicSelection = "christian+petermann";
+    // } else if ($(this).val($('2'))) {
+    //     musicSelection = "jose-estrella-resonante";
+    //  } else if (userChoice.val($('6'))) {
+    //     musicSelection = "schloub";
+    // } else {
+    //     console.log('Invalid item');
+    // }
 
-        $.ajax({
-            url: queryURLTwo,
-            method: "GET"
+    // console.log(musicSelection);
 
-        })
-            .then(function (response) {
-                console.log(response)
+    var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
 
-                if (musicSelection = "christian+petermann"){
+    $.ajax({
+        url: queryURLTwo,
+        method: "GET"
+
+    })
+        .then(function (response) {
+            console.log(response)
+
+            if (musicSelection = "christian+petermann") {
                 var link = $("<a>");
                 link.attr("href", response.results[0].shareurl);
                 link.attr("target", "_blank");
                 link.text(response.results[0].name);
-                link.addClass("link");}
-                
-                if (musicSelection = "schloub"){
-                    var link = $("<a>");
-                    link.attr("href", response.results[1].shareurl);
-                    link.attr("target", "_blank");
-                    link.text(response.results[1].name);
-                    link.addClass("link");}
+                link.addClass("link");
+            }
 
-                if (musicSelection = "schloub"){
-                    var link = $("<a>");
-                    link.attr("href", response.results[1].shareurl);
-                    link.attr("target", "_blank");
-                    link.text(response.results[1].name);
-                    link.addClass("link");}
+            if (musicSelection = "schloub") {
+                var link = $("<a>");
+                link.attr("href", response.results[1].shareurl);
+                link.attr("target", "_blank");
+                link.text(response.results[1].name);
+                link.addClass("link");
+            }
 
-                $("#randomPlaylist").append(link);
+            if (musicSelection = "schloub") {
+                var link = $("<a>");
+                link.attr("href", response.results[1].shareurl);
+                link.attr("target", "_blank");
+                link.text(response.results[1].name);
+                link.addClass("link");
+            }
 
-            });
+            $("#randomPlaylist").append(link);
+
+        });
 
 
 
 
-    })
+})
 
 });
