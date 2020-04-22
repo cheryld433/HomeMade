@@ -1,6 +1,5 @@
 $(document).ready(function () {
 
-
     var musicSelection;
 
     M.AutoInit();
@@ -136,80 +135,65 @@ $(document).ready(function () {
             $("#sixthHiddenContainer").hide()
                 && $('#lastContainer').show();
         }
-
-        //     $("#dropdown1").click(function(){
-        //         var userChoice = $(this).child("id")
-        //   });
-
-
-        var musicSelection = $('li').first()
-        console.log(musicSelection);
-        if (userChoice == "1") {
-            musicSelection = "christian+petermann";
-        } else if (userChoice == "2") {
-            musicSelection = "jose-estrella-resonante";
-        } else if (userChoice == "6") {
-            musicSelection = "schloub";
-        } else {
-            console.log("Stop/Don't run any API's");
-        }
-    
-
-    // var userChoice = $('#dropdown1').val();
-
-    // console.log(regionalSelection);
+        
+        var array = [];
+        $('span').each(function () {
+        array.push($(this).html());
+        regions = array.slice(0,8);
+        });
+        console.log(regions);
 
     // Why won't if/else if not work here?
 
-    // if ($(this).val($('1'))) {
-    //    musicSelection = "christian+petermann";
+    if (regions = "America") {
+        musicSelection = "christian+petermann";
     // } else if ($(this).val($('2'))) {
     //     musicSelection = "jose-estrella-resonante";
     //  } else if (userChoice.val($('6'))) {
     //     musicSelection = "schloub";
     // } else {
     //     console.log('Invalid item');
-    // }
+    }
 
     // console.log(musicSelection);
 
-    var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
+    // var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
 
-    $.ajax({
-        url: queryURLTwo,
-        method: "GET"
+    // $.ajax({
+    //     url: queryURLTwo,
+    //     method: "GET"
 
-    })
-        .then(function (response) {
-            console.log(response)
+    // })
+    //     .then(function (response) {
+    //         console.log(response)
 
-            if (musicSelection = "christian+petermann") {
-                var link = $("<a>");
-                link.attr("href", response.results[0].shareurl);
-                link.attr("target", "_blank");
-                link.text(response.results[0].name);
-                link.addClass("link");
-            }
+    //         if (musicSelection = "christian+petermann") {
+    //             var link = $("<a>");
+    //             link.attr("href", response.results[0].shareurl);
+    //             link.attr("target", "_blank");
+    //             link.text(response.results[0].name);
+    //             link.addClass("link");
+    //         }
 
-            if (musicSelection = "schloub") {
-                var link = $("<a>");
-                link.attr("href", response.results[1].shareurl);
-                link.attr("target", "_blank");
-                link.text(response.results[1].name);
-                link.addClass("link");
-            }
+    //         if (musicSelection = "schloub") {
+    //             var link = $("<a>");
+    //             link.attr("href", response.results[1].shareurl);
+    //             link.attr("target", "_blank");
+    //             link.text(response.results[1].name);
+    //             link.addClass("link");
+    //         }
 
-            if (musicSelection = "schloub") {
-                var link = $("<a>");
-                link.attr("href", response.results[1].shareurl);
-                link.attr("target", "_blank");
-                link.text(response.results[1].name);
-                link.addClass("link");
-            }
+    //         if (musicSelection = "schloub") {
+    //             var link = $("<a>");
+    //             link.attr("href", response.results[1].shareurl);
+    //             link.attr("target", "_blank");
+    //             link.text(response.results[1].name);
+    //             link.addClass("link");
+    //         }
 
-            $("#randomPlaylist").append(link);
+    //         $("#randomPlaylist").append(link);
 
-        });
+    //     });
 
 
 
