@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    var region;
     var musicSelection;
 
     M.AutoInit();
@@ -29,7 +30,12 @@ $(document).ready(function () {
         $('#firstHiddenContainer').show();
 
     });
+    $('#dropdown1').on("click", ".region", function () {
+        region = $(this).text();
+        console.log($(this))
+        console.log(region);
 
+    })
     $("#recipe-button-one").on("click", function (eventTwo) {
         eventTwo.preventDefault();
 
@@ -81,7 +87,6 @@ $(document).ready(function () {
                 drinkChoices.push(response);
                 console.log(response)
 
-                //Should for loop be added here?
 
                 var choice = drinkChoices[0].drinks[Math.floor(Math.random() * drinkChoices[0].drinks.length)];
 
@@ -135,69 +140,138 @@ $(document).ready(function () {
             $("#sixthHiddenContainer").hide()
                 && $('#lastContainer').show();
         }
-        
+
         var array = [];
         $('span').each(function () {
-        array.push($(this).html());
-        regions = array.slice(0,8);
+            array.push($(this).html());
+            regions = array.slice(0, 8);
         });
         console.log(regions);
 
-    // Why won't if/else if not work here?
 
-    if (regions = "America") {
-        musicSelection = "christian+petermann";
-    // } else if ($(this).val($('2'))) {
-    //     musicSelection = "jose-estrella-resonante";
-    //  } else if (userChoice.val($('6'))) {
-    //     musicSelection = "schloub";
-    // } else {
-    //     console.log('Invalid item');
+        console.log(region);
+
+        switch (region) {
+            case 'American':
+                musicSelection = "christian+petermann";
+                music(musicSelection)
+                break;
+            case 'Chinese':
+                musicSelection = "jose+estrella+resonante";
+                music(musicSelection)
+                break;
+            case 'Italian':
+                musicSelection = "mbesil";
+                music(musicSelection)
+                break;
+            case 'Mediterranean':
+                musicSelection = "youssef+el+idrissi";
+                music(musicSelection)
+                break;
+            case 'Ethiopian':
+                musicSelection = "saregama";
+                music(musicSelection)
+                break;
+            case 'Mexican':
+                musicSelection = "schloub";
+                music(musicSelection)
+                break;
+            case 'German':
+                musicSelection = "anarchyx";
+                music(musicSelection)
+                break;
+            case 'Brazilian':
+                musicSelection = "dabra";
+                music(musicSelection)
+                break;
+            default:
+                console.log("No selection made!")
+                break;
+        }
+    })
+
+
+    function music(musicSelection) {
+        var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
+
+        $.ajax({
+            url: queryURLTwo,
+            method: "GET"
+
+        })
+            .then(function (response) {
+                console.log(response)
+
+                if (musicSelection == "christian+petermann") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[0].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[0].name);
+                    link.addClass("link");
+                } else if (musicSelection == "jose+estrella+resonante") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[8].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[8].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "mbesil") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[0].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[0].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "youssef+el+idrissi") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[0].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[0].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "saregama") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[0].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[0].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "schloub") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[1].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[1].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "anarchyx") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[8].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[8].name);
+                    link.addClass("link");
+                }
+                else if (musicSelection == "dabra") {
+                    var link = $("<a>");
+                    link.attr("href", response.results[1].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[1].name);
+                    link.addClass("link");
+                } else {
+                    var link = $("<a>");
+                    link.attr("href", response.results[0].shareurl);
+                    link.attr("target", "_blank");
+                    link.text(response.results[0].name);
+                    link.addClass("link");
+
+                }
+
+                $("#randomPlaylist").append(link);
+
+            })
+
+
+
+
     }
-
-    // console.log(musicSelection);
-
-    // var queryURLTwo = 'https://api.jamendo.com/v3.0/albums/?client_id=cbf60db1&format=json&artist_name=' + musicSelection;
-
-    // $.ajax({
-    //     url: queryURLTwo,
-    //     method: "GET"
-
-    // })
-    //     .then(function (response) {
-    //         console.log(response)
-
-    //         if (musicSelection = "christian+petermann") {
-    //             var link = $("<a>");
-    //             link.attr("href", response.results[0].shareurl);
-    //             link.attr("target", "_blank");
-    //             link.text(response.results[0].name);
-    //             link.addClass("link");
-    //         }
-
-    //         if (musicSelection = "schloub") {
-    //             var link = $("<a>");
-    //             link.attr("href", response.results[1].shareurl);
-    //             link.attr("target", "_blank");
-    //             link.text(response.results[1].name);
-    //             link.addClass("link");
-    //         }
-
-    //         if (musicSelection = "schloub") {
-    //             var link = $("<a>");
-    //             link.attr("href", response.results[1].shareurl);
-    //             link.attr("target", "_blank");
-    //             link.text(response.results[1].name);
-    //             link.addClass("link");
-    //         }
-
-    //         $("#randomPlaylist").append(link);
-
-    //     });
-
-
-
-
-})
 
 });
