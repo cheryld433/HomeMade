@@ -81,11 +81,17 @@ $(document).ready(function () {
                 console.log(response)
                 var choice = drinkChoices[0].drinks[Math.floor(Math.random() * drinkChoices[0].drinks.length)];
                 var recipe = $("<a>");
+                recipe.attr("id", "drink-one")
                 recipe.attr("href", "https://www.thecocktaildb.com/drink.php?c=" + choice.idDrink + "-" + choice.strDrink.split(" ").join("-"));
                 recipe.attr("target", "_blank");
                 recipe.text(choice.strDrink);
                 recipe.addClass("link");
+                recipeImage = $('<img>');
+                recipeImage.attr('src', choice.strDrinkThumb);
+                recipeImage.attr("alt", "drink image");
+                recipeImage.css({'width': '100px', 'height': '100px', 'display': 'block'});
                 $('#drink-options').html(recipe);
+                $('#drink-one').append(recipeImage);
                 console.log(recipe);
                 $('#cocktail-choice-two').on('click', function (eventEight) {
                     eventEight.preventDefault();
@@ -95,21 +101,33 @@ $(document).ready(function () {
                     if (buttonCount == 1) {
                         var choice = drinkChoices[0].drinks[Math.floor(Math.random() * drinkChoices[0].drinks.length)];
                         var recipeTwo = $("<a>");
+                        recipeTwo.attr("id", "drink-two");
                         recipeTwo.attr("href", "https://www.thecocktaildb.com/drink.php?c=" + choice.idDrink + "-" + choice.strDrink.split(" ").join("-"));
                         recipeTwo.attr("target", "_blank");
                         recipeTwo.text(choice.strDrink);
                         recipeTwo.addClass("link");
+                        recipeTwoImage = $('<img>');
+                        recipeTwoImage.attr('src', choice.strDrinkThumb);
+                        recipeTwoImage.attr("alt", "drink image");
+                        recipeTwoImage.css({'width': '100px', 'height': '100px', 'display': 'block'});
                         $('#drink-options').html(recipeTwo);
+                        $('#drink-two').append(recipeTwoImage);
                         console.log(recipeTwo);
                     } else {
                         (buttonCount == 2)
                         var choice = drinkChoices[0].drinks[Math.floor(Math.random() * drinkChoices[0].drinks.length)];
                         var recipeThree = $("<a>");
+                        recipeThree.attr("id", "drink-three");
                         recipeThree.attr("href", "https://www.thecocktaildb.com/drink.php?c=" + choice.idDrink + "-" + choice.strDrink.split(" ").join("-"));
                         recipeThree.attr("target", "_blank");
                         recipeThree.text(choice.strDrink);
                         recipeThree.addClass("link");
+                        recipeThreeImage = $('<img>');
+                        recipeThreeImage.attr('src', choice.strDrinkThumb);
+                        recipeThreeImage.attr("alt", "drink image");
+                        recipeThreeImage.css({'width': '100px', 'height': '100px', 'display': 'block'})
                         $('#drink-options').html(recipeThree);
+                        $('#drink-three').append(recipeThreeImage);
                         console.log(recipeThree);
                         $('#cocktail-choice-two').hide()
                     }
@@ -124,12 +142,12 @@ $(document).ready(function () {
         if ($('#thirdHiddenContainer').show()) {
             $("#thirdHiddenContainer").hide() &&
                 $('#lastContainer').show();
-        lastContainer();
-            } 
-        
-        function lastContainer () {
+            lastContainer();
+        }
+
+        function lastContainer() {
             $("#fifthHiddenContainer").hide();
-                 $('#lastContainer').show();
+            $('#lastContainer').show();
         };
 
 
