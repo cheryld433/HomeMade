@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homemade</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="styles/style.css"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="parallax-container">
+        <div class="parallax">
+          <img
+            src="pictures/LandingPage.png"
+            id="LandingPage"
+            alt="HomemadeLogo"
+          />
+        </div>
+      </div>
+      <div class="section white">
+          <h3 class="header">What are you in the mood for?</h3>
+              <a
+                class="dropdown-trigger btn-large"
+                href="#"
+                data-target="dropdown1"
+                id="dropBtn"
+                >START HERE!</a
+              >
+           </div>
+        
+=======
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
 </head>
 <body>
@@ -15,187 +56,245 @@
         <a class="dropdown-trigger btn" href="#" data-target="dropdown1"
           >What are you in the mood for?</a>
   
-        <ul id="dropdown1" class="dropdown-content">
-          <li value="1"><a href="#!"></a>American</li>
-          <li value="2"><a href=""></a>Chinese</li>
-          <li value="3"><a href=""></a>Italian</li>
-          <li value="4"><a href=""></a>Mediterranean</li>
-          <li value="5"><a href=""></a>Ethiopian</li>
-          <li value="6"><a href=""></a>Mexican</li>
-          <li value="7"><a href=""></a>German</li>
-          <li value="8"><a href=""></a>Brazilian</li>
-        </ul>
+>>>>>>> 85a621b406a57812d380a18bd7abc0f1be08f64a
+          <ul id="dropdown1" class="dropdown-content">
+            <li><span class="region">American</span></li>
+            <li><span class="region">Chinese</span></li>
+            <li><span class="region">Italian</span></li>
+            <li><span class="region">Mediterranean</span></li>
+            <li><span class="region">Ethiopian</span></li>
+            <li><span class="region">Mexican</span></li>
+            <li><span class="region">German</span></li>
+            <li><span class="region">Brazilian</span></li>
+          </ul>
+<<<<<<< HEAD
+        </div>
       </div>
+=======
+        </div>     
   
-    <div class="container" id="firstHiddenContainer">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <!--Card title-->
-                <span class="card-title" id="ingredients"></span>
-                <p>What ingredients do you have in your pantry?
-                    Let's see what recipe we can pull up for you!
-                </p>
-                <div class="row">
-                  <form class="col s12">
-                    <div class="row">
-                      <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
-                        <!--Text area for user to enter in the ingredients they have-->
-                        <label for="textarea1" id="userIngredients"></label>
-                      </div>
-                      <button id="recipe-button-one">Submit</button>
-                    </div>
-                  </form>
-            </div>
-          </div>
+      <div class="container" id="recipeContainer">
+        <div class="row" id="searchData">
+
+          
         </div>
-      </div>
-      </div>
-      </div>
-      <div class="container" id="secondHiddenContainer">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <!--Card title-->
-                <span class="card-title" id="ingredients"></span>
-                <p>How about do you feel about?</p>
-                <div class="row">
-              <div class="card-action">
-                <!--Button for randomizing recipe pulls one page-->
-                <button id="mealBtn">Sounds good to me!</button>
-                <button id="mealBtn-two">What else do you have to offer?</button>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+</head>
+<body>
+  <!-- -THIS CONTAINER WILL SHOW FIRST -->
+  <div class="container" id="dropDownContainer">
+    <h2>Welcome to A Date to Remember ~ See what we can pull up for you!</h2>
+    <a id="dropDownBtn" class="dropdown-trigger btn" href="#" data-target="dropdown1">What are you in the mood for?</a>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><span class="region">American</span></li>
+      <li><span class="region">Chinese</span></li>
+      <li><span class="region">Italian</span></li>
+      <li><span class="region">Mediterranean</span></li>
+      <li><span class="region">Ethiopian</span></li>
+      <li><span class="region">Mexican</span></li>
+      <li><span class="region">German</span></li>
+      <li><span class="region">Brazilian</span></li>
+    </ul>
+  </div>
+  <!---This container will show SECOND - after the cuisine chosen-->
+  <div class="container" id="recipeContainer">
+    <div class="row" id="searchData">
+>>>>>>> 85a621b406a57812d380a18bd7abc0f1be08f64a
+    </div>
+
+    <div class="container" id="recipeContainer">
+      <div class="row" id="searchData"></div>
+    </div>
+<div class="section white">
+    <a class="waves-effect waves-light btn" id="mealBtn">Next</a>
+
+    <!---COCKTAIL CONTAINER-->
+  <div class="container" id="thirdHiddenContainer">
+    <div class="row">
+        <div class="col s12 m4 l8">
+          <div class="card">
+            <div class="card-content black-text>
+              <!--Card title-->
+              <span class="card-title" id="ingredients"></span>
+              <p>Would you like a cocktail recipe to go with that meal?</p>
+              <div class="row">
+                <div class="card-action">
+                  <!--Button for randomizing recipe pulls one page-->
+                  <a class="waves-effect waves-light btn" id="cocktailBtn"
+                    >Sounds good to me!</a
+                  >
+                  <a class="waves-effect waves-light btn" class="playlist-menu"
+                    >No thank you.</a
+                  >
+                </div>
               </div>
             </div>
           </div>
-        </div>
+         </div>
       </div>
-      </div>
-      </div>
-      <div class="container" id="thirdHiddenContainer">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <!--Card title-->
-                <span class="card-title" id="ingredients"></span>
-                <p>Would you like a cocktail recipe to go with that meal?</p>
-                <div class="row">
-              <div class="card-action">
-                <!--Button for randomizing recipe pulls one page-->
-                <button id="cocktailBtn">Sounds good to me!</button>
-                <button class="playlist-menu">No thank you.</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
-      <div class="container" id="fourthHiddenContainer">
-        <div class="row">
-            <div class="col s12 m6">
-              <div class="card blue-grey darken-1">
-                <div class="card-content white-text">
-                  <!--Card title-->
-                  <span class="card-title" id="cocktail-ingredients"></span>
-                  <p>What is your preferred type of liquor for your cocktail?
-                  </p>
+    </div>
+  </div>
+  <div class="container" id="fourthHiddenContainer">
+    <div class="section white"
+      <div class="row">
+        <div class="col s12 m4 l8">
+          <div class="card">
+            <div class="card-content black-text">
+              <!--Card title-->
+              <span class="card-title" id="cocktail-ingredients"></span>
+              <p>What is your preferred type of liquor for your cocktail?</p>
+              <div class="row">
+                <form class="s12 m4 l8">
                   <div class="row">
-                    <form class="col s12">
-                      <div class="row">
-                        <div class="input-field col s12">
-                          <textarea id="textarea2" class="cocktail-textarea"></textarea>
-                          <!--Text area for user to enter in the ingredients they have-->
-                        </div>
-                        <button type="submit" value="ANY_VALUE_HERE" id="send">Submit</button>
-                      </div>
-                    </form>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-        </div>
-        <div class="container" id="fifthHiddenContainer">
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                  <div class="card-content white-text">
-                    <!--Card title-->
-                    <span class="card-title"></span>
-                    <p>What do you think about:</p>
-                    <div class="row">
-                      <div id="drink-options"></div>
-                </div>
-              </div>
-              <div class="card-content white-text">
-                <!--Card title-->
-                <div class="row">
-              <div class="card-action">
-                <!--Button for randomizing recipe pulls one page-->
-                <button id="cocktail-choice">Sounds good to me!</button>
-                <button id="cocktail-choice-two">What else do you have to offer?</button>
-              </div>
-            </div>
-          </div>
-            </div>
-          </div>
-          </div>
-          </div>  
-          <div class="container" id="sixthHiddenContainer">
-            <div class="row">
-              <div class="col s12 m6">
-                <div class="card blue-grey darken-1">
-                  <div class="card-content white-text">
-                    <!--Card title-->
-                    <span class="card-title" id="drink-confirmation"></span>
-                    <p>Need the recipe, or ready to check out play list options?</p>
-                    <div class="row">
-                      <div id="drink-recipe"></div>
-                </div>
-              </div>
-              <div class="card-content white-text">
-                <!--Card title-->
-                <div class="row">
-              <div class="card-action">
-                <!--Button for randomizing recipe pulls one page-->
-                <button class="playlist-menu">No, thank you. Ready to party!</button>
-              </div>
-            </div>
-          </div>
-            </div>
-          </div>
-          </div>
-          </div>  
-      <!----THIS CONTAINER WILL SHOW LAST-->
-      <div class="container" id="lastContainer">
-        <div class="row">
-          <div class="col s12 m6">
-            <div class="card blue-grey darken-1">
-              <div class="card-content white-text">
-                <!--Card title can populate with the playlist name here in this span-->
-                <span class="card-title" id="namePlaylist"></span>
-                <p>Here is a playlist for you while you cook.  
-                  Ready to get started with the evening?</p>
-                <span id="randomPlaylist"></span>
-                <div class="row">
-                  <div class="card-action playlist">
-                    <!--Button for randomizing recipe pulls one page-->
-                    <!--<button id="playlist-confirm">Yes, let the evening begin!</button>
-                    <button id="playlist-next-option">Not yet. Do you have another option?</button>-->
+                    <div class="input-field col s12 m4 l8">
+                      <textarea
+                        id="textarea2"
+                        class="cocktail-textarea"
+                      ></textarea>
+                      <!--Text area for user to enter in the ingredients they have-->
+                    </div>
+                    <a class="waves-effect waves-light btn" id="send">Submit</a>
                   </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+  <div class="container" id="fifthHiddenContainer">
+    <div class="section white"></div>
+      <div class="row">
+        <div class="col s12 m4 l8">
+          <div class="card">
+            <div class="card-content black-text">
+              <!--Card title-->
+              <span class="card-title"></span>
+              <p>What do you think about:</p>
+              <div class="row">
+                <div id="drink-options"></div>
+              </div>
+              <p>Click above for recipe!</p>
+            </div>
+            <div class="card-content black-text">
+              <!--Card title-->
+              <div class="row">
+                <div class="card-action">
+                  <!--Button for randomizing recipe pulls one page-->
+                  <button class="playlist-menu">Sounds good to me!</button>
+                  <button id="cocktail-choice-two">
+                    What else do you have to offer?
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <!----THIS CONTAINER WILL SHOW LAST-->
+    <div class="container" id="lastContainer">
+      <div class="row">
+        <div class="col s12 m4 l8">
+          <div class="card">
+            <div class="card-content black-text">
+              <!--Card title can populate with the playlist name here in this span-->
+              <span class="card-title" id="namePlaylist"></span>
+              <p>Here is a playlist for your evening. Enjoy!</p>
+              <span id="randomPlaylist"></span>
+              <div class="row">
+                <div class="card-action playlist">
+                  <!--populated div-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" id="carouselContainer">
+      <div class="carousel">
+        <a class="carousel-item"
+          ><img
+            src="pictures/banneton.png"
+            class="img-thumbnail"
+            alt="MediterraneanSteak"
+        /></a>
+        <a class="carousel-item"
+          ><img
+            src="pictures/crayagnolotti.png"
+            class="img-thumbnail"
+            alt="PorkTenderloin"
+        /></a>
+        <a class="carousel-item"
+          ><img src="pictures/devilsfood.png" class="img-thumbnail" alt="Tacos"
+        /></a>
+        <a class="carousel-item"
+          ><img
+            src="pictures/homecookin.png"
+            class="img-thumbnail"
+            alt="Posole"
+        /></a>
+        <a class="carousel-item"
+          ><img src="pictures/shortbread.png" class="img-thumbnail" alt="Soup"
+        /></a>
+        <a class="carousel-item"
+          ><img
+            src="pictures/Asparagussoup.png"
+            class="img-thumbnail"
+            alt="ChickenParmesean"
+        /></a>
+        <a class="carousel-item"
+          ><img
+            src="pictures/bambooshoots.png"
+            class="img-thumbnail"
+            alt="AngusBeefSandwich"
+        /></a>
+      </div>
+    </div>
+<<<<<<< HEAD
+    <button
+      id="carouselBtn"
+      class="btn waves-effect waves-light"
+      type="submit"
+      name="action"
+    >
+      Want To See What Other Users Have Done!?
+      <i class="material-icons right">send</i>
+    </button>
+    <button
+      id="closeBtn"
+      class="btn waves-effect waves-light"
+      type="submit"
+      name="action"
+    >
+      Close
+      <i class="material-icons right">close</i>
+    </button>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script type="text/javascript" src="test.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+=======
+  </div>
+  <button id="carouselBtn" class="btn waves-effect waves-light" type="submit" name="action">Want To See What Other Users
+    Have Done!?
+    <i class="material-icons right">send</i>
+  </button>
+  <button id="closeBtn" class="btn waves-effect waves-light" type="submit" name="action">Close
+    <i class="material-icons right">close</i>
+  </button>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
+>>>>>>> 85a621b406a57812d380a18bd7abc0f1be08f64a
 </html>
