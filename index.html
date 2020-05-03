@@ -18,55 +18,65 @@
       href="styles/style.css"
       media="screen,projection"
     />
+    <link rel="stylesheet" href="styles/normalize.css">
+
   </head>
   <body>
-    <div class="container">
-      <div class="parallax-container">
-        <div class="parallax">
-          <img
-            src="pictures/LandingPage.png"
-            id="LandingPage"
-            alt="HomemadeLogo"
-          />
-        </div>
-      </div>
-      <div class="section white">
-          <h3 class="header">What are you in the mood for?</h3>
+    <header>
+      <picture>
+        <source media="(max-width: 576px)"
+            srcset= "pictures\LOGO.JPG">
+        <source media="(max-width: 922px)"
+            srcset= "pictures\LandingPage-22.png">
+        <source media="(min-width: 923px)"
+            srcset= "pictures\LandingPage.png">
+          <img src="pictures\LandingPage.png" alt="HOMEMADE LOGO" srcset="#">
+      </picture> 
+    </header>
+     <div class="divider"></div>
+    
+     <h3 class="header">What are you in the mood for?</h3>
+     
+     <div class="divider"></div>
+     <br></br>
+       <div class="flex-container">
+          <div class="row">
+            <div class="col s12 m4 l8">
               <a
                 class="dropdown-trigger btn-large"
                 href="#"
                 data-target="dropdown1"
                 id="dropBtn"
-                >START HERE!</a
-              >
-           </div>
-        
-          <ul id="dropdown1" class="dropdown-content">
-            <li><span class="region">American</span></li>
-            <li><span class="region">Chinese</span></li>
-            <li><span class="region">Italian</span></li>
-            <li><span class="region">Mediterranean</span></li>
-            <li><span class="region">Ethiopian</span></li>
-            <li><span class="region">Mexican</span></li>
-            <li><span class="region">German</span></li>
-            <li><span class="region">Brazilian</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+                >START HERE!
+              </a>
 
-    <div class="container" id="recipeContainer">
+               <ul id="dropdown1" class="dropdown-content">
+                  <li><span class="region">American</span></li>
+                  <li><span class="region">Chinese</span></li>
+                  <li><span class="region">Italian</span></li>
+                  <li><span class="region">Mediterranean</span></li>
+                  <li><span class="region">Ethiopian</span></li>
+                  <li><span class="region">Mexican</span></li>
+                  <li><span class="region">German</span></li>
+                  <li><span class="region">Brazilian</span></li>
+                </ul>
+             </div>
+          </div>
+       </div>
+
+
+    <div class="flex-container" id="recipeContainer">
       <div class="row" id="searchData"></div>
+      <br></br>
+        <a class="waves-effect waves-light btn" id="mealBtn">Next</a>
     </div>
-<div class="section white">
-    <a class="waves-effect waves-light btn" id="mealBtn">Next</a>
 
     <!---COCKTAIL CONTAINER-->
-  <div class="container" id="thirdHiddenContainer">
-    <div class="row">
-        <div class="col s12 m4 l8">
-          <div class="card">
-            <div class="card-content black-text>
+ <div class="flex-container" id="thirdHiddenContainer">
+   <div class="row">
+      <div class="col s12 m4 l8">
+        <div class="card">
+           <div class="card-content black-text>
               <!--Card title-->
               <span class="card-title" id="ingredients"></span>
               <p>Would you like a cocktail recipe to go with that meal?</p>
@@ -83,12 +93,13 @@
               </div>
             </div>
           </div>
-         </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="container" id="fourthHiddenContainer">
-    <div class="section white"
+   </div>
+  
+  
+  <div class="flex-container" id="fourthHiddenContainer">
+    <div class="section">
       <div class="row">
         <div class="col s12 m4 l8">
           <div class="card">
@@ -96,17 +107,19 @@
               <!--Card title-->
               <span class="card-title" id="cocktail-ingredients"></span>
               <p>What is your preferred type of liquor for your cocktail?</p>
-              <div class="row">
+               <div class="row">
                 <form class="s12 m4 l8">
                   <div class="row">
                     <div class="input-field col s12 m4 l8">
-                      <textarea
+                     <textarea
                         id="textarea2"
                         class="cocktail-textarea"
                       ></textarea>
                       <!--Text area for user to enter in the ingredients they have-->
                     </div>
-                    <a class="waves-effect waves-light btn" id="send">Submit</a>
+                    
+                      <a class="waves-effect waves-light btn" id="send">Submit</a>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -114,11 +127,11 @@
           </div>
         </div>
       </div>
-    </div>
+     </div>
+  </div>
 
   
-  <div class="container" id="fifthHiddenContainer">
-    <div class="section white"></div>
+  <div class="flex-container" id="fifthHiddenContainer">
       <div class="row">
         <div class="col s12 m4 l8">
           <div class="card">
@@ -134,21 +147,20 @@
             <div class="card-content black-text">
               <!--Card title-->
               <div class="row">
-                <div class="card-action">
+               <div class="card-action">
                   <!--Button for randomizing recipe pulls one page-->
                   <button class="playlist-menu">Sounds good to me!</button>
                   <button id="cocktail-choice-two">
-                    What else do you have to offer?
-                  </button>
-                </div>
-              </div>
+                    What else do you have to offer?</button>
+               </div>
+             </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+     </div>
+   </div>
     <!----THIS CONTAINER WILL SHOW LAST-->
-    <div class="container" id="lastContainer">
+    <div class="flex-container" id="lastContainer">
       <div class="row">
         <div class="col s12 m4 l8">
           <div class="card">
@@ -167,7 +179,7 @@
         </div>
       </div>
     </div>
-    <div class="container" id="carouselContainer">
+    <div class="flex-container" id="carouselContainer">
       <div class="carousel">
         <a class="carousel-item"
           ><img
