@@ -331,5 +331,4 @@ $(document).ready(function () {
     displayRecipes(region);
   });
 
-  
 });
